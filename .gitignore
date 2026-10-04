@@ -1,0 +1,7 @@
+# This repo is distribution-only (zip / exe). No source.
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.tmp
+*.log
