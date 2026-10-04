@@ -1,0 +1,21 @@
+如何上传到 GitHub（只发发行包，不含源码）
+
+1. 打开 https://github.com/new 新建一个空仓库（不要勾选自动加 README）
+2. 在本机打开终端，进入本目录 github-upload：
+
+   cd /d "H:\信息收集\微信强开\小程序反编译内部版本2.0\github-upload"
+
+3. 初始化并推送：
+
+   git init
+   git add .
+   git commit -m "Release: WMPFDebugger portable"
+   git branch -M main
+   git remote add origin https://github.com/<你的用户名>/<仓库名>.git
+   git push -u origin main
+
+注意：
+- 单文件约 89MB，zip 约 89MB，均低于 GitHub 单文件 100MB 限制
+- 若 push 很慢，可只保留 WMPFDebugger-portable.zip，删掉 onefile 再推
+- 源码仍在上一级目录，不要把上一级整仓推上去
+- 本 github-upload 已在源码仓 .gitignore 中忽略
